@@ -1,0 +1,37 @@
+# Browser and editor state
+Code/
+mozilla/
+zen/
+
+# Application state and credentials
+evolution/
+go/
+ibus/
+nautilus/
+pulse/
+spotify/
+yay/
+
+# Machine-specific desktop state
+monitors.xml
+monitors.xml~
+user-dirs.dirs
+user-dirs.locale
+dconf/user
+
+# Generated and transient files
+**/*.lock
+**/*.log
+**/*-journal
+**/*-wal
+**/Cache/
+**/Cache_Data/
+**/Code Cache/
+**/GPUCache/
+**/blob_storage/
+**/storage/
+**/startupCache/
+**/sessionstore-backups/
+
+# Local editor metadata
+hypr/.vscode/
