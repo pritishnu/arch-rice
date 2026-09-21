@@ -18,13 +18,13 @@ hl.window_rule({
 -- Set border color to red if window is fullscreen
 hl.window_rule({
   match        = { fullscreen = true },
-  border_color = "rgb(FF0000) rgb(880808)",
+  border_color = "rgb(7957ad) rgb(7957ad)",
 })
 
 -- Set border color to yellow when title contains Hyprland
 hl.window_rule({
   match        = { title = ".*Hyprland.*" },
-  border_color = "rgb(FFFF00)",
+  border_color = "rgb(5092b5)",
 })
 
 -- Set opacity to 1.0 active, 0.5 inactive and 0.8 fullscreen for kitty
@@ -40,4 +40,12 @@ hl.window_rule({ match = { class = "kitty" }, rounding = 10 })
 hl.window_rule({
   match       = { class = "(pinentry-)(.*)" },
   stay_focused = true,
+})
+
+hl.window_rule({
+    name = "portal-file-chooser",
+    match = { class = "^(xdg-desktop-portal-gtk)$" },
+    float = true,
+    center = true,
+    size = "900 600",
 })

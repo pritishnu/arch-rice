@@ -5,7 +5,7 @@
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-local terminal = os.getenv("TERM") or "alacritty"
+--local terminal = os.getenv("TERM") or "alacritty"
 local fileManager = "nautilus"
 local menu = "rofi -show drun"
 local terminal = "kitty"
@@ -21,6 +21,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("/home/vyke/.tarball-installations/zen/zen"))
 
 -- Move focus with mainMod + arrow keys
@@ -65,3 +66,9 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+
+--screenshot
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
+hl.bind("SUPER + SHIFT + A", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+hl.bind("Print", hl.dsp.exec_cmd('grim ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png'))
+hl.bind("SUPER + SHIFT + Z", hl.dsp.exec_cmd('noctalia msg panel-toggle clipboard'))
