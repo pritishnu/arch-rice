@@ -13,9 +13,9 @@
 -- 2880x1800 at scale 1.5 = 1920x1200 logical pixels (divides cleanly)
 hl.monitor({
     output   = "eDP-1",
-    mode     = "2880x1800@120",
+    mode     = "2880x1800@120",   -- change to @60 to save battery
     position = "0x0",
-    scale    = 1.6,
+    scale    = 1.67,
     bitdepth = 10,
     cm       = "hdr",
 })
@@ -50,7 +50,7 @@ local sdr = 1.0
 local function set_sdr(step)
     sdr = math.max(0.2, math.min(2.0, sdr + step))
     hl.exec_cmd(string.format(
-        [[hyprctl eval 'hl.monitor({ output = "eDP-1", mode = "2880x1800@120", position = "0x0", scale = 1.6, bitdepth = 10, cm = "hdr", sdrbrightness = %.2f, sdr_max_luminance = 250 })']],
+        [[hyprctl eval 'hl.monitor({ output = "eDP-1", mode = "2880x1800@120", position = "0x0", scale = 1.67, bitdepth = 10, cm = "hdr", sdrbrightness = %.2f, sdr_max_luminance = 250 })']],
         sdr
     ))
 end

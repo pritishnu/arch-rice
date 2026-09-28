@@ -44,8 +44,16 @@ hl.window_rule({
 
 hl.window_rule({
     name = "portal-file-chooser",
-    match = { class = "^(xdg-desktop-portal-gtk)$" },
+    match = { class = "^(Xdg-desktop-portal-gtk)$" },
     float = true,
     center = true,
-    size = "900 600",
+    size = "800 600",
 })
+
+hl.config({
+    xwayland = {
+        force_zero_scaling = true,
+    },
+})
+
+hl.env("GTK_USE_PORTAL", "1")

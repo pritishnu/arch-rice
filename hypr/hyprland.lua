@@ -31,7 +31,6 @@ require("modules.plugins")
 require("modules.misc")
 require("modules.autostart")
 require("modules.programs")
-require("modules.hyprpaper")
 
 hl.config({
     xwayland = {
