@@ -31,10 +31,3 @@ require("modules.plugins")
 require("modules.misc")
 require("modules.autostart")
 require("modules.programs")
-
-hl.config({
-    xwayland = {
-        force_zero_scaling = true,
-    },
-})
-hl.env("GTK_USE_PORTAL", "1")

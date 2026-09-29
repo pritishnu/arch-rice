@@ -1,4 +1,5 @@
 hl.on("hyprland.start", function()
+    --hl.exec_cmd("caelestia shell -d")
     hl.exec_cmd("noctalia")
     hl.exec_cmd("systemctl --user start hyprland-clipboard")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")

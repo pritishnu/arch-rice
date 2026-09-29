@@ -30,7 +30,7 @@ hl.window_rule({
 -- Set opacity to 1.0 active, 0.5 inactive and 0.8 fullscreen for kitty
 hl.window_rule({
   match   = { class = "kitty" },
-  opacity = "0.92 override 0.6 override 0.8 override",
+  opacity = "0.90 override 0.6 override 0.8 override",
 })
 
 -- Set rounding to 10 for kitty
@@ -47,7 +47,7 @@ hl.window_rule({
     match = { class = "^(Xdg-desktop-portal-gtk)$" },
     float = true,
     center = true,
-    size = "800 600",
+    size = "1200 800",
 })
 
 hl.config({
