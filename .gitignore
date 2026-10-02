@@ -2,6 +2,8 @@
 Code/
 mozilla/
 zen/
+Codex/
+Vencord/
 
 # Application state and credentials
 evolution/
@@ -11,6 +13,11 @@ nautilus/
 pulse/
 spotify/
 yay/
+discord/
+obsidian/
+onedrive/
+onlyoffice/
+opencode/
 
 # Machine-specific desktop state
 monitors.xml
@@ -32,6 +39,9 @@ dconf/user
 **/storage/
 **/startupCache/
 **/sessionstore-backups/
+**/*.gif
+**/*.jpg
+**/*.png
 
 # Local editor metadata
 hypr/.vscode/
