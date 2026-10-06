@@ -57,3 +57,5 @@ hl.config({
 })
 
 hl.env("GTK_USE_PORTAL", "1")
+hl.env("GDK_SCALE", "2")
+hl.env("QT_SCALE_FACTOR", "2")
