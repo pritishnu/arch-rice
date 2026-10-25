@@ -50,12 +50,20 @@ hl.window_rule({
     size = "1200 800",
 })
 
+-- cursor brightness sync with the system brightness
+hl.config({
+    cursor = {
+        no_hardware_cursors = true,
+    },
+})
+
+
 hl.config({
     xwayland = {
         force_zero_scaling = true,
     },
 })
 
-hl.env("GTK_USE_PORTAL", "1")
-hl.env("GDK_SCALE", "2")
-hl.env("QT_SCALE_FACTOR", "2")
+hl.env("GTK_USE_PORTAL", "1.67")
+hl.env("GDK_SCALE", "1.67")
+hl.env("QT_SCALE_FACTOR", "1.67")
