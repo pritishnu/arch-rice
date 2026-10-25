@@ -8,11 +8,12 @@
 --hl.env("HYPRCURSOR_SIZE", "24")
 --hl.env("XCURSOR_THEME", "JetBrains-Mono")
 
-hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
 hl.env("XCURSOR_SIZE", "24")
-
-hl.env("HYPRCURSOR_THEME", "vimix-kanagawa-hyprcursors")
 hl.env("HYPRCURSOR_SIZE", "24")
+
+hl.on("hyprland.start", function()
+    hl.exec_cmd("hyprctl setcursor Posy_Cursor_White 24")
+end)
 
 -----------------------
 ----- PERMISSIONS -----
