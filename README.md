@@ -37,4 +37,5 @@ This setup is centered around a Hyprland desktop environment and includes termin
 - Do not commit secrets, browser data, cached logs, or personal app state.
 - Keep machine-specific files such as monitor settings and session state separate when needed.
 
-This setup is intended to make my Linux environment reproducible and easy to maintain.
+This setup is intended to make my Linux environment reproducible and easy to maintain
+Read the Arch Wiki for further help do not clone this if you do not know how everything works.
