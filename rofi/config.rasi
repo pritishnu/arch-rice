@@ -1,1 +1,159 @@
-@theme "/home/vyke/.local/share/rofi/themes/spotlight-dark.rasi"
+//@theme "/home/vyke/.local/share/rofi/themes/spotlight-dark.rasi"
+
+configuration {
+    modi: "drun,run,window,filebrowser";
+    font: "JetBrainsMono Nerd Font 11";
+    show-icons: true;
+    icon-theme: "Papirus";
+    terminal: "alacritty";
+
+    drun-display-format: "{name}";
+    disable-history: false;
+    sidebar-mode: true;
+    sort: true;
+    sorting-method: "fzf";
+    matching: "fuzzy";
+
+    window-format: "{w}  ·  {c}  ·  {t}";
+
+    display-drun: "󰀻  Apps";
+    display-run: "󰆍  Run";
+    display-window: "󰖯  Windows";
+    display-filebrowser: "󰉋  Files";
+}
+
+/* Kanagawa Dragon palette */
+* {
+    bg:              #181616;
+    bg-alt:          #22211f;
+    surface:         #282727;
+    surface-hover:   #30332d;
+    fg:              #c5c9c5;
+    muted:           #737c73;
+    accent:          #87a987;
+    accent-alt:      #8ea4a2;
+    red:             #c4746e;
+    gold:            #c4b28a;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 640px;
+
+    border: 1px;
+    border-color: #45483f;
+    border-radius: 18px;
+    background-color: @bg;
+    padding: 0px;
+}
+
+mainbox {
+    background-color: @bg;
+    padding: 20px;
+    spacing: 14px;
+    children: [ "inputbar", "listview", "mode-switcher" ];
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border: 1px;
+    border-color: #3b3b35;
+    border-radius: 12px;
+    padding: 13px 15px;
+    spacing: 12px;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    font: "JetBrainsMono Nerd Font Bold 12";
+    text-color: @accent;
+    background-color: transparent;
+}
+
+entry {
+    font: "JetBrainsMono Nerd Font 11";
+    text-color: @fg;
+    placeholder: "Search applications...";
+    placeholder-color: @muted;
+    cursor: text;
+    background-color: transparent;
+}
+
+listview {
+    columns: 1;
+    lines: 7;
+    spacing: 5px;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    fixed-height: true;
+    fixed-columns: true;
+    background-color: transparent;
+}
+
+element {
+    orientation: horizontal;
+    spacing: 12px;
+    padding: 10px 12px;
+    border: 1px;
+    border-color: transparent;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element alternate.normal {
+    background-color: #1d1c1a;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @surface-hover;
+    border-color: #53634e;
+    text-color: @accent;
+}
+
+element-icon {
+    size: 26px;
+    cursor: inherit;
+    background-color: transparent;
+}
+
+element-text {
+    vertical-align: 0.5;
+    cursor: inherit;
+    text-color: inherit;
+    background-color: transparent;
+}
+
+mode-switcher {
+    spacing: 8px;
+    background-color: transparent;
+}
+
+button {
+    padding: 9px 10px;
+    border: 1px;
+    border-color: #393832;
+    border-radius: 9px;
+    background-color: @bg-alt;
+    text-color: @muted;
+    cursor: pointer;
+}
+
+button selected {
+    background-color: #30382e;
+    border-color: @accent;
+    text-color: @accent;
+}

@@ -56,7 +56,15 @@ hl.config({
         no_hardware_cursors = true,
     },
 })
-
+--zen browser picture in picture
+hl.window_rule({
+    name = "zen-pip",
+    match = { title = "^(Picture-in-Picture)$" },
+    float = true,
+    pin = true,
+    size = {"monitor_w * 0.25", "monitor_h * 0.25"},
+    move = {"monitor_w - window_w - 20", "monitor_h - window_h - 20"},
+})
 
 hl.config({
     xwayland = {
@@ -64,6 +72,6 @@ hl.config({
     },
 })
 
-hl.env("GTK_USE_PORTAL", "1.67")
-hl.env("GDK_SCALE", "1.67")
-hl.env("QT_SCALE_FACTOR", "1.67")
+hl.env("GTK_USE_PORTAL", "2")
+hl.env("GDK_SCALE", "2")
+hl.env("QT_SCALE_FACTOR", "2")
