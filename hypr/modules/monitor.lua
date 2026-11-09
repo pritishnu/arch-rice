@@ -15,7 +15,7 @@ hl.monitor({
     output   = "eDP-1",
     mode     = "2880x1800@120",   -- change to @60 to save battery
     position = "0x0",
-    scale    = 1.67,
+    scale    = 1.8,
     bitdepth = 10,
     cm       = "hdr",
 })
@@ -44,7 +44,7 @@ local function monitor_cfg(v)
         output = "eDP-1",
         mode = "2880x1800@120",
         position = "0x0",
-        scale = 1.67,
+        scale = 1.8,
         bitdepth = 10,
         cm = "hdr",
         sdrbrightness = v,
@@ -61,7 +61,7 @@ local function set_sdr(step)
     sdr = math.max(0.2, math.min(2.0, sdr + step))
     save_sdr(sdr)
     hl.exec_cmd(string.format(
-        [[hyprctl eval 'hl.monitor({ output = "eDP-1", mode = "2880x1800@120", position = "0x0", scale = 1.67, bitdepth = 10, cm = "hdr", sdrbrightness = %.2f, sdr_max_luminance = 250 })']],
+        [[hyprctl eval 'hl.monitor({ output = "eDP-1", mode = "2880x1800@120", position = "0x0", scale = 1.8, bitdepth = 10, cm = "hdr", sdrbrightness = %.2f, sdr_max_luminance = 250 })']],
         sdr
     ))
 end
@@ -77,7 +77,7 @@ hl.bind("XF86MonBrightnessDown", function() set_sdr(-0.1) end, { locked = true, 
 --    bitdepth = 8,
 --    cm       = "srgb",
 --})
- 
+
 -- Fallback for any external monitor you plug in later
 --hl.monitor({
 --    output   = "",

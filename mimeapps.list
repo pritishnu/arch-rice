@@ -12,6 +12,9 @@ application/x-extension-xht=zen.desktop
 x-scheme-handler/codex=chatgpt.desktop
 text/markdown=obsidian.desktop
 video/mp4=vlc.desktop
+x-scheme-handler/notion=notion.desktop
+x-scheme-handler/notion-agents=notion.desktop
+application/lrf=calibre-lrfviewer.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;

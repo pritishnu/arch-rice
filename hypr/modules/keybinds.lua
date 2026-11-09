@@ -38,7 +38,7 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.swap({ direction = "left" }))
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.swap({ direction = "right" }))
 hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.swap({ direction = "up" }))
-hl.bind(mainMod .. " +SHIFT + down",  hl.dsp.window.swap({ direction = "down" }))
+hl.bind(mainMod .. " +SHIFT + down", hl.dsp.window.swap({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
@@ -79,10 +79,11 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 --screenshot
 
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
-hl.bind("SUPER + ALT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
-hl.bind("SUPER + S", hl.dsp.exec_cmd('grim ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png'))
+-- Region screenshot: saved to ~/Pictures/Screenshots and copied to clipboard
+hl.bind("SUPER + ALT + S", hl.dsp.exec_cmd("$HOME/.local/bin/screenshot-region"))
+
+-- Full screen: saved and copied
+hl.bind("SUPER + S", hl.dsp.exec_cmd("$HOME/.local/bin/screenshot-full"))
 
 --clipboard
-
 hl.bind("SUPER + SHIFT + Z", hl.dsp.exec_cmd('noctalia msg panel-toggle clipboard'))

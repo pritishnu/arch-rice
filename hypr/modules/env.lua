@@ -14,7 +14,11 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.on("hyprland.start", function()
     hl.exec_cmd("hyprctl setcursor Posy_Cursor_White 24")
 end)
-
+hl.config({
+    misc = {
+        font_family = "ZedMono Nerd Font",
+    },
+})
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
